@@ -18,4 +18,3 @@ def search(name, year=None):
         print(f' - {dog["HundenameText"]} ({dog["SexHundLang"]}, born in {dog["StichtagDatJahr"]})')
 
 
-search('Aaron', "2015")
