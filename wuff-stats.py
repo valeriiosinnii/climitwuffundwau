@@ -1,18 +1,20 @@
 from wuff import read_data
 from collections import Counter
 
+
 def male_count():
     dogs = read_data()
     m = Counter([dog['HundenameText'] for dog in dogs if dog['SexHundLang'] == 'männlich'])
     return m
+
 
 def female_count():
     dogs = read_data()
     f = Counter([dog['HundenameText'] for dog in dogs if dog['SexHundLang'] == 'weiblich'])
     return f
 
-def stats():
 
+def stats():
     dogs = read_data()
     name_counts = Counter([dog['HundenameText'] for dog in dogs])
 
@@ -43,7 +45,3 @@ def stats():
 
     print(f'\nNumber of male dogs: {len(male_counter)}')
     print(f'Number of female dogs: {len(female_counter)}')
-
-
-
-
