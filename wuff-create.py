@@ -49,5 +49,3 @@ def download_dog_image():
         for chunk in response.iter_content():
             f.write(chunk)
     return f'{output_dir}{file_name}'
-
-
