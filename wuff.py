@@ -1,25 +1,27 @@
-import csv
-import requests
 import argparse
-from wuff-find import search
-from wuff-create import create_new_dog
-from wuff-stats import stats
+from wuff_find import search
+from wuff_create import create_new_dog
+from wuff_stats import stats
+
 
 def run(args):
     if args.find:
-        search()
+        search(args.find)
+    elif args.create:
+        if args.outputdir:
+            create_new_dog(output=args.outputdir)
+        else:
+            create_new_dog(output='/Users/rev4l/')
     elif args.stats:
         stats()
-    elif args.create:
-        create_new_dog()
 
 
 def get_parser():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--find', help='finds the dog/dogs')
-    parser.add_argument('--create', help='create a new dog')
-    parser.add_argument('--stats', help='gives stats')
-    parser.add_argument("--year", help="year to use for data analysis")
+    parser = argparse.ArgumentParser(description='Dog data around Zurich')
+    parser.add_argument('find', help='Search for dogs', nargs="?")
+    parser.add_argument('stats', help='Stats about dogs', action='store_true')
+    parser.add_argument('--create', help='Create a new dog', action='store_true')
+    parser.add_argument('--outputdir', '-o', help='Output directory(With --create usage only)', nargs="?")
     return parser
 
 

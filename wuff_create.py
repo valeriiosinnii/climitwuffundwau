@@ -17,11 +17,11 @@ def read_data():
         return e
 
 
-def create_new_dog():
+def create_new_dog(output):
     name = create_new_dog_name()
     birth_year = create_new_dog_years()
     sex = create_new_dog_sexes()
-    output_file = download_dog_image()
+    output_file = download_dog_image(output)
     print("Here's your new dog!")
     print(f'Name:{name}')
     print(f'Birth year:{birth_year}')
@@ -47,12 +47,11 @@ def create_new_dog_sexes():
     return sex
 
 
-def download_dog_image():
+def download_dog_image(output_dir='/Users/rev4l/'):
     response = requests.get('https://random.dog/woof.json')
     response_json = response.json()
     media_url = response_json['url']
     file_name = f'{create_new_dog_name()}_{create_new_dog_years()}{pathlib.Path(media_url).suffix}'
-    output_dir = f'/Users/rev4l/'
     file_path = os.path.join(output_dir, file_name)
     with open(file_path, 'wb') as f:
         response = requests.get(media_url, stream=True)
