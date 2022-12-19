@@ -3,7 +3,6 @@ import requests
 import pathlib
 import os
 
-
 from wuff import read_data
 
 

@@ -1,6 +1,5 @@
 from wuff import read_data
 
-
 def search(name, year=None):
     dogs = read_data()
 
@@ -12,4 +11,3 @@ def search(name, year=None):
     print(f'Found {len(dogs)} dogs with the name "{name}":')
     for dog in dogs:
         print(f' - {dog["HundenameText"]} ({dog["SexHundLang"]}, born in {dog["StichtagDatJahr"]})')
-
