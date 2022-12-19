@@ -2,8 +2,19 @@ import random
 import requests
 import pathlib
 import os
+import csv
 
-from wuff import read_data
+URL = 'https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen_od1002/download/KUL100OD1002.csv'
+
+
+def read_data():
+    try:
+        response = requests.get(URL)
+        response.encoding = "utf-8-sig"
+        lines = response.text.splitlines()
+        return csv.DictReader(lines)
+    except Exception as e:
+        return e
 
 
 def create_new_dog():
