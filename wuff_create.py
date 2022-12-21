@@ -3,6 +3,7 @@ import requests
 import pathlib
 import os
 import csv
+from rich import print
 
 URL = 'https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen_od1002/download/KUL100OD1002.csv'
 
@@ -57,4 +58,4 @@ def download_dog_image(output_dir='/Users/rev4l/'):
         response = requests.get(media_url, stream=True)
         for chunk in response.iter_content():
             f.write(chunk)
-    return f'{output_dir}{file_name}'
+    return f'[green]{output_dir}{file_name}[/green]'
