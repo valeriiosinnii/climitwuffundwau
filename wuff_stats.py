@@ -1,6 +1,7 @@
 from collections import Counter
 import csv
 import requests
+from rich import print
 
 URL = 'https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen_od1002/download/KUL100OD1002.csv'
 

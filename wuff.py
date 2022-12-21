@@ -3,7 +3,6 @@ from wuff_find import search
 from wuff_create import create_new_dog
 from wuff_stats import stats
 
-
 def run(args):
     if args.find:
         search(args.find)
