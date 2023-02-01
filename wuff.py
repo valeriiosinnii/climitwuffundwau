@@ -20,7 +20,7 @@ def run(args):
 def get_parser():
     parser = argparse.ArgumentParser(description='Providing information about dogs in Zurich')
     parser.add_argument('stats', help='Stats about dogs', action='store_true')
-    parser.add_argument('-f', '--find', help='Search for dogs', action='store_true')
+    parser.add_argument('-f', '--find', help='Search for dogs')
     parser.add_argument('-c', '--create', help='Create a new dog', action='store_true')
     parser.add_argument('-o', '--output', help='Output directory')
 
