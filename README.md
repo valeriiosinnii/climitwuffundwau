@@ -1,7 +1,7 @@
 # CLI mit Wuff und Wau
-<h1><b>Project: "CLI mit Wuff und Wau"</b></h1>
+<h2><b>Project: "CLI mit Wuff und Wau"</b></h2>
 
-<h2>Allows to find, create(locally) and receive stats about dogs in Zurich</h2>
+<p>Allows to find, create(locally) and receive stats about dogs in Zurich</p>
 
 FIND usage
 
