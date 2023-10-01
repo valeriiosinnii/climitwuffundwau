@@ -3,12 +3,12 @@
 
 <p>Allows to find, create(locally) and receive stats about dogs in Zurich</p>
 
-FIND usage
+<b>FIND usage</b>
 
 python wuff.py -f/--find (Name)
 example: python wuff.py -f Bo
 
-CREATE usage
+<b>CREATE usage</b>
 
 python wuff.py -c/--create (-o/--output 'dir')
 
@@ -16,7 +16,7 @@ example: python wuff.py -c (default output: C:\Users\Public)
 
 example with desired dir output: python wuff.py -c -o C:\Users\
 
-STATS usage
+<b>STATS usage</b>
 
 example: python wuff.py
 
