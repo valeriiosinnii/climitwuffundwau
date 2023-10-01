@@ -11,7 +11,9 @@ example: python wuff.py -f Bo
 CREATE usage
 
 python wuff.py -c/--create (-o/--output 'dir')
+
 example: python wuff.py -c (default output: C:\Users\Public)
+
 example with desired dir output: python wuff.py -c -o C:\Users\
 
 STATS usage
