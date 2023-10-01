@@ -1,4 +1,4 @@
-# climitwuffundwau
+# CLI mit Wuff und Wau
 <b>Project: "CLI mit Wuff und Wau"</b>
 
 Allows to find, create(locally) and receive stats about dogs in Zurich
