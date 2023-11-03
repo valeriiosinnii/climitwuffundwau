@@ -1,23 +1,17 @@
 # CLI mit Wuff und Wau
-<h2><b>Project: "CLI mit Wuff und Wau"</b></h2>
 
-<p>Allows to find, create(locally) and receive stats about dogs in Zurich</p>
+## Usage
 
-<b>FIND usage</b>
-
+```python
+# Finding dogs
 python wuff.py -f/--find (Name)
-example: python wuff.py -f Bo
+python wuff.py -f Bo  # Finds dogs named Bo
 
-<b>CREATE usage</b>
-
+# Creating dog's photo
 python wuff.py -c/--create (-o/--output 'dir')
+python wuff.py -c # Example with default output
+python wuff.py -c -o C:\Users\ # Example with desired outpu
 
-example: python wuff.py -c (default output: C:\Users\Public)
+# Stats about all dogs
+python wuff.py
 
-example with desired dir output: python wuff.py -c -o C:\Users\
-
-<b>STATS usage</b>
-
-example: python wuff.py
-
-Hope you enjoyed this project ^_^
